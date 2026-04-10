@@ -4,49 +4,45 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Incident Management Dashboard</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="assets/css/style.css" />
   <script defer src="assets/js/app.js"></script>
 </head>
+
 <body>
-  <aside class="sidebar">
-    <h2>IMD</h2>
-    <nav>
-      <a href="#dashboard" class="active">Dashboard</a>
-      <a href="#incidents">Incidents</a>
-      <a href="#reports">Reports</a>
-    </nav>
-  </aside>
+  <div class="app-layout">
 
-  <main class="content">
-    <header class="topbar">Enterprise Incident Management</header>
-
-    <section id="dashboard" class="page active">
-      <h1>Dashboard</h1>
-      <div class="cards">
-        <div class="card p1">P1<br><strong>2</strong></div>
-        <div class="card p2">P2<br><strong>5</strong></div>
-        <div class="card p3">P3<br><strong>11</strong></div>
-        <div class="card p4">P4<br><strong>20</strong></div>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="logo">IM</span>
+        <span class="brand-text">Incident</span>
       </div>
-    </section>
 
-    <section id="incidents" class="page">
-      <h1>Incidents</h1>
-      <input type="text" placeholder="Search incidents..." class="search" />
-      <table>
-        <thead><tr><th>ID</th><th>Title</th><th>Priority</th><th>Status</th></tr></thead>
-        <tbody>
-          <tr><td>INC001</td><td>Login Issue</td><td class="p1">P1</td><td class="open">Open</td></tr>
-          <tr><td>INC002</td><td>API Delay</td><td class="p2">P2</td><td class="investigating">Investigating</td></tr>
-        </tbody>
-      </table>
-    </section>
+      <nav class="nav">
+        <a href="#dashboard" class="nav-link active">Dashboard</a>
+        <a href="#incidents" class="nav-link">Incidents</a>
+        <a href="#reports" class="nav-link">Reports</a>
+      </nav>
+    </aside>
 
-    <section id="reports" class="page">
-      <h1>Reports</h1>
-      <p>Weekly SLA and MTTR reports will appear here.</p>
-    </section>
+    <!-- Main content -->
+    <main class="main">
+      <header class="topbar">
+        <h1>Enterprise Incident Management</h1>
+      </header>
 
-  </main>
-</body>
-</html>
+      <!-- Dashboard -->
+      <section id="dashboard" class="page active">
+        <h2 class="page-title">Overview</h2>
+
+        <div class="kpi-grid">
+          <div class="kpi-card p1">
+            <span class="kpi-label">P1 Incidents</span>
+            <span class="kpi-value">2</span>
+          </div>
+          <div class="kpi-card p2">
+            <span class="kpi-label">P2 Incidents</span>
